@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java12_absendenaufgabe.Calculator_Controller">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="320.0">
+         <children>
+            <Label text="Zahl1">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></Label>
+            <TextField fx:id="eingabe1">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin></TextField>
+            <Label text="Zahl2">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin></Label>
+            <TextField fx:id="eingabe2">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#berechnen" text="Berechnen">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Ergebnis:">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="ergebnisLabel">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#dialogKlick" text="Dialog">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="237.0" prefWidth="220.0">
+         <children>
+            <RadioButton mnemonicParsing="false" onAction="#additionKlick" text="Addition">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="meineGruppe" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#substraktionKlick" text="Substraktion" toggleGroup="$meineGruppe">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#multiplikationKlick" text="Multiplikation" toggleGroup="$meineGruppe">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#divisionKlick" text="Division" toggleGroup="$meineGruppe">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Button mnemonicParsing="false" onAction="#beendenKlick" text="Beenden">
+               <VBox.margin>
+                  <Insets left="40.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
